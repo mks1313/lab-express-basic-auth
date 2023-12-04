@@ -7,9 +7,26 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{title}}</title>
     <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+
+  
   </head>
 
   <body>
+    <nav>
+      <ul>
+        <li id="to-right">
+          {{#if userInSession}}
+            <form action="/logout" method="POST">
+              <button type="submit">Logout</button>
+            </form>
+          {{else}}
+            <a href="/signup">Signup</a> <span id="span"> |</span>
+            <a href="/login">Login</a>
+          {{/if}}
+        </li>
+      </ul>
+    </nav>
 
     {{{body}}}
 

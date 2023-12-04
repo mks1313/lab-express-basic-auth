@@ -1,0 +1,11 @@
+<div class="user-profile-container">
+  <h1>Your Profile</h1>
+  {{#if userInSession}}
+    <p>Welcome, {{userInSession.username}}!</p>
+  {{else}}
+    <p>Please log in to access your profile.</p>
+    <a href="/login">Login</a> <span id="span"> |</span>
+    <a href="/signup">Signup</a>
+  {{/if}}
+</div>
+

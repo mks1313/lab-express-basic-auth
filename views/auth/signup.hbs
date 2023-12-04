@@ -1,0 +1,22 @@
+<div id="form">
+  <form action="/signup" method="POST">
+    <label> Username
+      <input type="text" name="username" placeholder="Your username..." required />
+    </label>
+
+    <label> Password
+      <input type="password" name="password" placeholder="Your password *******" required />
+    </label>
+
+    <button type="submit">Create account</button>
+
+    {{#if errorMessage}}
+      <p class="error">{{errorMessage}}</p>
+    {{/if}}
+
+    {{#if emptyFieldsError}}
+      <p class="error">Both username and password are required.</p>
+    {{/if}}
+  </form>
+</div>
+

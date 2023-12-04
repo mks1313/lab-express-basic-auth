@@ -1,8 +1,152 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: bisque; 
+  margin: 0; 
+  overflow: hidden;
 }
 
 a {
   color: #00B7FF;
+  text-decoration: none;
+  font-size: 1.5em;
 }
+
+form {
+  margin: 30px auto;
+  width: 380px;
+}
+
+form label {
+  color: #666;
+  display: inline-block;
+  margin-bottom: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+form input,
+form button {
+  box-sizing: border-box;
+  font-size: 14px;
+  outline: 0;
+  padding: 4px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+form button {
+  background: #43a3e6;
+  border: 1px solid #43a3e6;
+  border-radius: 30px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  padding: 8px 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.3s;
+  width: 100%;
+}
+
+form button:hover {
+  background: #fff;
+  color: #43a3e6;
+  transition: 0.3s;
+}
+
+#span {
+  font-size: 20px;
+}
+
+#to-right {
+  list-style-type: none;
+  text-align: right; 
+  padding: 10px; 
+}
+
+#to-right a {
+  margin-left: 10px;
+  text-decoration: none;
+  color:rgb(94, 161, 254);
+}
+.user-profile-container {
+  background-image: url('/images/user2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  overflow: hidden;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+@keyframes colorWave {
+  0% {
+    color: rgb(181, 125, 41);
+  }
+  25% {
+    color: rgb(0, 255, 187);
+  }
+  50% {
+    color: rgb(67, 67, 195);
+  }
+  75% {
+    color: rgb(65, 166, 65);
+  }
+  100% {
+    color: rgb(126, 56, 164);
+  }
+}
+
+.title {
+  animation: colorWave 3s infinite;
+  font-size: 30px; 
+}
+.wellcome {
+  overflow: hidden;
+  border-right: 0.15em solid orange; 
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.15em; 
+  animation: typing 3s steps(40) infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+form[action="/logout"] button {
+  background: #43a3e6;
+  border: 1px solid #43a3e6;
+  border-radius: 30px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  padding: 8px 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.3s;
+  width: auto; 
+} 
+
+ form[action="/logout"] button:hover {
+  background: #fff;
+  color: #43a3e6;
+  transition: 0.3s;
+}
+.user-profile-container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
