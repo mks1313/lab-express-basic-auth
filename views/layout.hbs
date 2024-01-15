@@ -1,27 +1,29 @@
-<!DOCTYPE html>
 <html lang="en">
 
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>{{title}}</title>
     <link rel="stylesheet" href="/stylesheets/style.css" />
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
 
-  
   </head>
 
   <body>
-    <nav>
+    <nav id="navigator">
       <ul>
         <li id="to-right">
           {{#if userInSession}}
-            <form action="/logout" method="POST">
+            <a href="/private">Private</a> |
+            <a href="/userProfile">User Profile</a> |
+            <a href="/main">Main</a> |
+            <form class="logout" action="/logout" method="POST">
               <button type="submit">Logout</button>
             </form>
           {{else}}
-            <a href="/signup">Signup</a> <span id="span"> |</span>
+            <a href="/signup">Signup</a>
+            <span id="span"> |</span>
             <a href="/login">Login</a>
           {{/if}}
         </li>

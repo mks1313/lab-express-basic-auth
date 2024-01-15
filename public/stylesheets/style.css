@@ -69,7 +69,12 @@ form button:hover {
   margin-left: 10px;
   text-decoration: none;
   color:rgb(94, 161, 254);
+  transition: color 0.3s ease;
 }
+#to-right a:hover {
+color:black;
+}
+
 .user-profile-container {
   background-image: url('/images/user2.jpg');
   background-size: cover;
@@ -149,4 +154,74 @@ form[action="/logout"] button {
   height: auto;
   object-fit: cover;
 }
+/* LOGIN */
 
+#login-form {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.signup-section {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.signup-section p {
+  margin-bottom: 10px;
+}
+
+.signup-section a {
+  color: #007bff;
+  text-decoration: none;
+}
+#to-right form button {
+  background: #43a3e6;
+  border: 1px solid #43a3e6;
+  border-radius: 30px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 8px 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+
+#to-right form button:hover {
+  background: #fff;
+  color: #43a3e6;
+  transition: 0.3s;
+}

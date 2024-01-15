@@ -56,8 +56,9 @@ router.post('/login', authMiddleware, (req, res) => {
                 res.render('auth/login', { errorMessage: 'User not found or incorrect password.' });
             } else {
                 if (bcryptjs.compareSync(password, user.passwordHash)) {
-                    req.session.currentUser = user;
-                    res.redirect('/userProfile');
+                  const { passwordHash, ...userWithoutPassword } = user.toObject();
+                  req.session.currentUser = userWithoutPassword;
+                  res.redirect('/userProfile');
                 } else {
                     res.render('auth/login', { errorMessage: 'User not found or incorrect password.' });
                 }
@@ -68,7 +69,7 @@ router.post('/login', authMiddleware, (req, res) => {
 
 // USER PROFILE ROUTES
 router.get('/userProfile', authMiddleware, (req, res) => {
-    res.render('users/user-profile', { userInSession: req.session.currentUser });
+    res.render('users/user-profile');
 });
 
 // LOGOUT ROUTE
@@ -78,7 +79,7 @@ router.post('/logout', (req, res) => {
          console.error('Error destroying session:', error);
          return res.status(500).json({ errorMessage: 'Internal Server Error' });
       }
-
+      
       res.redirect('/');
    });
 });
